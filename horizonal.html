@@ -1,0 +1,249 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+
+  <style>
+    .gallery-row{
+        display:flex;
+        display:-webkit-flex;
+        flex-flow:row nowrap;
+      }
+      
+      .gallery-row-scroll{
+        display:flex;
+        display:-webkit-flex;
+        overflow-x:scroll;
+        -webkit-overflow-scrolling: touch;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-flex-flow: row nowrap;
+      
+      }
+      
+      .gallery-row-scroll > *{
+        margin: 0 0.1em;
+        -webkit-flex:0 0 auto;
+      }
+      
+      .gallery-row-scroll > :first-child{
+        margin-left: 0;
+      }
+      
+      .gallery-row-scroll > :last-child{
+        margin-right: 0;
+      }
+      
+      .gallery-row img{
+        display:block;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;
+      }
+      /*
+      html.touchevents .gallery-row svg{
+        display:none;
+      }
+      */
+      
+      .gallery-row svg{
+        background-color:rgba(0,0,0,0.5);
+        width:10%;
+        max-width:50px;
+        min-width:20px;
+        opacity:0.75;
+        cursor:pointer;
+      }
+      
+      .gallery-row svg:hover{
+        background-color:rgba(0,0,0,0.75);
+        opacity:1;
+      cursor:pointer;
+      }
+      
+      .gallery-row .arrow.right{
+        right:0;
+      }
+      
+      .gallery-row.large img{
+        height:200px;
+        width:auto;
+      }
+      
+      .gallery-row.small img{
+        height:150px;
+        width:auto;
+      }
+      
+  </style>
+</head>
+
+<body>
+  <svg style="background-color:#aaa;" width="0" height="0">
+    <defs>
+      <path id="scrollArrow" d="M -20,0 L 20 -50, 10 0, 20 50 Z"/>
+    </defs>
+<!--
+    <g transform="translate(60,60)">
+      <use xlink:href="#scrollArrow" />
+      <circle cx="0" cy="0" r="4" fill="red"/>
+    </g>
+    <rect width="100" height="100" x="10" y="10" stroke="#fff" fill="none" stroke-width="2"/> -->
+  </svg>
+
+  <div id="widthControlled" class="gallery-row small">
+    <svg id="leftArrow" class="arrow left" viewBox="0 0 100 100">
+      <use xlink:href="#scrollArrow" style="fill:white" transform="translate(50,50)"/>
+    </svg>
+    <div id="scroller" class="gallery-row-scroll">
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>الكل</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>شقق للبيع</span>
+      </a>
+      <a href="/realstate/search/?q=for_rent" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>شقق للإيجار</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>منازل</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>أراضي</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>عقارات صنعاء</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>عقارات عدن</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>محلات للبيع</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>محلات للإيجار</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>for sale</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>for sale</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>for sale</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>for sale</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>for sale</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>for sale</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>for sale</span>
+      </a>
+      <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled btn-primary">
+        <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>for sale</span>
+      </a>
+      
+        
+    </div>
+
+    <svg id="rightArrow" class="arrow right" viewBox="0 0 100 100">
+      <use xlink:href="#scrollArrow" style="fill:white" transform="translate(50,50) rotate(180)"/>
+    </svg>
+    
+  </div>
+
+
+
+<br><br><br><br><br>
+
+<input id="widthController" type="range" min="1" max="900">
+<label>&#8592; For debugging responsiveness</label>
+<script>
+
+
+var scroller = document.querySelector('.gallery-row-scroll');
+var leftArrow = document.getElementById('leftArrow');
+
+var direction = 0;
+var active = false;
+var max = 10;
+var Vx = 0;
+var x = 0.0;
+var prevTime = 0;
+var f = 0.2;
+var prevScroll = 0;
+
+function physics(time) {
+  // Measure how much time has passed
+  var diffTime = time - prevTime;
+  if (!active) {
+    diffTime = 80;
+    active = true;
+  }
+  prevTime = time;
+
+  // Give power to the scrolling
+
+  console.log(diffTime);
+
+  Vx = (direction * max * f + Vx * (1-f)) * (diffTime / 20);
+
+  x += Vx;
+  var thisScroll = scroller.scrollLeft;
+  var nextScroll = Math.floor(thisScroll + Vx);
+
+  if (Math.abs(Vx) > 0.5 && nextScroll !== prevScroll) {
+    scroller.scrollLeft = nextScroll;
+    requestAnimationFrame(physics);
+  } else {
+    Vx = 0;
+    active = false;
+  }
+  prevScroll = nextScroll;
+}
+
+leftArrow.addEventListener('mousedown', function () {
+  direction = -1;
+  if (!active) {
+    requestAnimationFrame(physics);
+  }
+});
+
+leftArrow.addEventListener('mouseup', function () {
+  direction = 0;
+});
+
+rightArrow.addEventListener('mousedown', function () {
+  direction = 1;
+  if (!active) {
+    requestAnimationFrame(physics);
+  }
+});
+rightArrow.addEventListener('mouseup', function(event){
+  direction = 0;
+});
+
+// controller stuff
+var widthControlled = document.getElementById('widthControlled');
+var widthController = document.getElementById('widthController');
+widthController.addEventListener('input', function (event) {
+  widthControlled.style.width = this.value;
+});
+</script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/all.min.js"></script>
+</body>
+</body>
+</html>

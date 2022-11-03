@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yemen realstate</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bondi.css" />
+    <link rel="stylesheet" href="css/list.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet" />
+    <style>
+
+header {
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.header {
+  padding: 10px 16px;
+ 
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+.sticky {
+  display:block;
+  background: #555;
+  position: fixed;
+  width: 100%;
+  z-index: 2; 
+}
+.sticky + .content {
+  padding-top: 102px;
+}
+    </style>
+  </head>
+  <body >
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top ">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'realstate:homepage' %}">
+            <img src="{% static 'realstate/imgs/realstate1.jpeg'%}" alt="" />
+            <span>الدلال العقاري</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main"
+            aria-controls="main"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="main">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="{% url 'realstate:homepage' %}">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="{% url 'realstate:rs-create' %}">إضافة عقار</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">أطلب عقار</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">أضف خدمتك</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">المدونة</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">تواصل معنا</a>
+              </li>
+            </ul>
+            <div class="search ps-3 pe-3 d-none d-lg-block">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a class="btn rounded-pill main-btn" href="#">Login</a>
+          </div>
+        </div>
+      </nav>
+      <div class="" >
+        <h2>My Header</h2>
+      </div>
+    </header>
+    
+      
+      <div class="content">
+        <h3>On Scroll Sticky Header</h3>
+        <p>The header will stick to the top when you reach its scroll position.</p>
+        <p>Scroll back up to remove the sticky effect.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+      </div>
+      <div class="main ">
+  
+        <!-- Actual search box -->
+        <div class="form-group has-search">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <!-- Another variation with a button -->
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search this blog">
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="button">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        </div>
+        <p class="mt-4 text-center"><a href="https://www.gungorbudak.com/blog/2018/12/12/bootstrap-4-search-box-with-search-icon/">See how it's done on my blog</a></p>
+      </div>
+      <div style="height: 4000px;">
+
+      </div>
+      
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+      console.log(sticky);
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+      </script>
+  </body>
+  </html>

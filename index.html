@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yemen realstate</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bondi.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet" />
+  </head> -->
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'realstate:homepage' %}">
+            <img src="{% static 'realstate/imgs/realstate1.jpeg'%}" alt="" />
+            <span>الدليل العقاري</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main"
+            aria-controls="main"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="main">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="{% url 'realstate:homepage' %}">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="{% url 'realstate:rs-create' %}">إضافة عقار</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">أطلب عقار</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">أضف خدمتك</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">المدونة</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-2 p-lg-3" href="#">تواصل معنا</a>
+              </li>
+            </ul>
+            <a class="btn rounded-pill main-btn" href="#">Login</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Carsousel section -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imgs/imag7.jpg" class="d-block w-100" alt="image one ">
+            <div class="carousel-caption">
+              <h5>أبحث الأن عن بيت الأحلام</h5>
+              <p> نوفر لك جميع ماتحتاجة عن العقارات في مكان واحد</p>
+              <div class="card ">
+                <!-- Actual search box -->
+                <div class="card-body">
+                  <div class="rent-sale">
+                    <button class="sale">للبيع</button>
+                    <button class="rent">للإيجار</button>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <span class="filter-property">المنطقة</span>
+                      <select class="mt-2" name="" id="">
+                        <option value="">المنطقة الوسطى </option>
+                        <option value="">الضاحية</option>
+                        <option value="">منطقة تجارية</option>
+                        <option value="">منطقة سكنية</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-3">
+                      <span class="filter-property">المدينة</span>
+                      <select class="mt-2" name="" id="">
+                        <option value="">صنعاء</option>
+                        <option value="">ذمار</option>
+                        <option value="">عدن</option>
+                        <option value="">حضرموت</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-3">
+                      <span class="filter-property">البحث بحسب</span>
+                      <select class="mt-2" name="" id="">
+                        <option value="">الكل</option>
+                        <option value="">بيوت</option>
+                        <option value="">شقق</option>
+                        <option value="">فلل</option>
+                      </select>
+                    </div>
+                    <div class=" col-lg-3">
+                      <button class="search-btn btn">Search</button>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class=" main-search main">
+                  <!-- Actual search box -->
+                  <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- horizonal scroll -->
+      <div class="container">
+        <div id="widthControlled" class="gallery-row small ">
+          <?xml version="1.0" encoding="utf-8"?>
+        <div id="leftArrow" class="mt-4" >
+        <span  xlink:href="#scrollArrow" ><i style="font-size:37px" class=" fa-solid fa-chevron-left"></i></span>
+      </div>
+          
+          <div id="scroller" class="gallery-row-scroll mt-4 mx-auto">
+            <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled ">
+              <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>الكل</span>
+            </a>
+            <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled">
+              <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>شقق للبيع</span>
+            </a>
+            <a href="/realstate/search/?q=for_rent" class="btn  btn-labeled ">
+              <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>شقق للإيجار</span>
+            </a>
+            <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled ">
+              <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>منازل</span>
+            </a>
+            <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled ">
+              <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>أراضي</span>
+            </a>
+            <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled ">
+              <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>عقارات صنعاء</span>
+            </a>
+            <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled ">
+              <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>عقارات عدن</span>
+            </a>
+            <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled ">
+              <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>محلات للبيع</span>
+            </a>
+            <a href="/realstate/search/?q=for_sale" class="btn  btn-labeled ">
+              <span class="btn-label me-2"><i class="fa fa-camera me-2"></i>محلات للإيجار</span>
+            </a>
+          </div>
+          <div id="rightArrow" class="mt-4" style="height: 100%">
+            <span  xlink:href="#scrollArrow" ><i style="font-size:37px" class=" fa-solid fa-chevron-right"></i></span>
+          </div>
+        </div>
+      </div>
+      <!-- end horizonal scroll -->
+          <!-- End Carsousel section -->
+    <!-- services -->
+    <!-- for rent -->
+    <section class="rent py-3">
+      <div class="container text-center py-5">
+        <h1 class="text-center py-5">عقارات للإيجار</h1>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 mb-5 card-container ">
+            <div class="card">
+              <div class="img">
+                <img src="imgs/download.jpeg" alt="" class="img-fluid">
+              </div>
+              <input type="text" class="btnc" value="للإيجار">
+              <h6 class="mt-3 mx-3">$3500+</h6>
+              <small class="m-2 text-black-50">3 bedrooms|1500m | 2 floor </small>
+              <p class="p-3 text-black-50">بيت بالمنطقة الغربية نوفر لك جميع ماتحتاجة عن العقارات في مكان واح نوفر لك جميع ماتحتاجة عن العقارات في مكان واحد
+              </p>
+              <small class="text-black-50">الموقع</small>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5 card-container ">
+            <div class="card">
+              <div class="img">
+                <img src="imgs/download.jpeg" alt="" class="img-fluid">
+              </div>
+              <input type="text" class="btnc" value="للإيجار">
+              <h6 class="mt-3 mx-3">$3500+</h6>
+              <small class="m-2 text-black-50">3 bedrooms|1500m | 2 floor </small>
+              <p class="p-3 text-black-50">بيت بالمنطقة الغربية نوفر لك جميع ماتحتاجة عن العقارات في مكان واح نوفر لك جميع ماتحتاجة عن العقارات في مكان واحد
+              </p>
+              <small class="text-black-50">الموقع</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <i class="fas fa-angle-left change-background fa-2x"></i>
+      <i class="fas fa-angle-right change-background fa-2x"></i>
+      <div class="bullets-btn">
+        <button class="open-all"> عرض الكل</button>
+        <ul class="bullets">
+          <li></li>
+          <li class="active"></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+    <!-- for sale -->
+    <section class="sale rent py-3 ">
+      <div class="container text-center py-5">
+        <h1 class="text-center py-5">عقارات للبيع </h1>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 mb-5 card-container ">
+            <div class="card">
+              <div class="img">
+                <img src="imgs/download.jpeg" alt="" class="img-fluid">
+              </div>
+              <input type="text" class="btnc" value="للبيع">
+              <h6 class="mt-3 mx-3">$3500+</h6>
+              <small class="m-2 text-black-50">3 bedrooms|1500m | 2 floor </small>
+              <p class="p-3 text-black-50">بيت بالمنطقة الغربية نوفر لك جميع ماتحتاجة عن العقارات في مكان واح نوفر لك جميع ماتحتاجة عن العقارات في مكان واحد
+              </p>
+              <small class="text-black-50">الموقع</small>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5 card-container ">
+            <div class="card">
+              <div class="img">
+                <img src="imgs/download.jpeg" alt="" class="img-fluid">
+              </div>
+              <input type="text" class="btnc" value="للبيع">
+              <h6 class="mt-3 mx-3">$3500+</h6>
+              <small class="m-2 text-black-50">3 bedrooms|1500m | 2 floor </small>
+              <p class="p-3 text-black-50">بيت بالمنطقة الغربية نوفر لك جميع ماتحتاجة عن العقارات في مكان واح نوفر لك جميع ماتحتاجة عن العقارات في مكان واحد
+              </p>
+              <small class="text-black-50">الموقع</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bullets-btn">
+        <button class="open-all"> عرض الكل</button>
+        <ul class="bullets">
+          <li></li>
+          <li class="active"></li>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+    <!-- end services -->
+    <!-- horizonal scroll -->
+    <div class="container scroll-imgs">
+      <div id="widthControlled" class="gallery-row small ">
+        <?xml version="1.0" encoding="utf-8"?>
+      <div id="leftimgArrow" class="mt-4" >
+      <span  xlink:href="#scrollArrow" ><i style="font-size:37px" class=" fa-solid fa-chevron-left"></i></span>
+    </div>
+        <div id="scrollerimgs" class="gallery-row-scroll mt-4 mx-auto">
+          <a href="#" class="btn  btn-labeled">
+            <img src="imgs/img1.jpg" alt="" >
+            <p>عقارات عدن</p>
+          </a>
+
+          <a href="#" class="btn  btn-labeled">
+            <img src="imgs/imag7.jpg" alt="" >
+            <p>عقارات صنعاء</p>
+          </a>
+          <a href="#" class="btn  btn-labeled">
+            <img src="imgs/image2.webp" alt="" >
+            <p>عقارات تعز</p>
+          </a>
+          <a href="#" class="btn  btn-labeled">
+            <img src="imgs/img6.jpg" alt="" >
+            <p>عقارات لحج</p>
+          </a>
+          <a href="#" class="btn  btn-labeled">
+            <img src="imgs/img5.jpg" alt="" >
+            <p>عقارات حضرموت</p>
+            <a href="#" class="btn  btn-labeled">
+              <img src="imgs/img4.jpg" alt="" >
+              <p>عقارات ذمار</p>
+            </a>
+            <a href="#" class="btn  btn-labeled">
+              <img src="imgs/img1.webp" alt="" >
+              <p>عقارات الحديدة</p>
+            </a>
+            <a href="#" class="btn  btn-labeled">
+              <img src="imgs/shibam.jpg" alt="" >
+              <p>عقارات شبوه</p>
+            </a>
+            <a href="#" class="btn  btn-labeled">
+              <img src="imgs/main1.jpg" alt="" >
+              <p>عقارات مأرب</p>
+            </a>
+          </div>
+          <div id="rightimgArrow" class="mt-4" >
+            <span  xlink:href="#scrollArrow" >
+              <i style="font-size:37px" class=" fa-solid fa-chevron-right "></i>
+            </span>
+          </div>
+    </div>
+    </div>
+    <div class="footer  mt-5 pt-5 pb-5 text-white-50 text-center text-md-start">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="info mb-5">
+              <img src="imgs/logo.png" alt="" class="mb-4" />
+              <p class="mb-5">
+                Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed,
+                convallis at tellus.
+              </p>
+              <div class="copyright">
+                Created By <span>Graphberry</span>
+                <div>&copy; 2022 - <span>Bondi Inc</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <div class="links">
+              <h5 class="text-light">Links</h5>
+              <ul class="list-unstyled lh-lg">
+                <li>Home</li>
+                <li>Our Services</li>
+                <li>Portfolio</li>
+                <li>Testimonials</li>
+                <li>Support</li>
+                <li>Terms and Condition</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <div class="links">
+              <h5 class="text-light">About Us</h5>
+              <ul class="list-unstyled lh-lg">
+                <li>Sign In</li>
+                <li>Register</li>
+                <li>About Us</li>
+                <li>Blog</li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="contact">
+              <h5 class="text-light">Contact Us</h5>
+              <p class="lh-lg mt-3 mb-5">Get in touch with us via mail phone.We are waiting for your call or message</p>
+              <a class="btn rounded-pill main-btn w-100" href="#">graphberry@gmail.com</a>
+              <ul class="d-flex mt-5 list-unstyled gap-3">
+                <li>
+                  <a class="d-block text-light" href="#"
+                    ><i class="fa-brands fa-facebook fa-lg facebook rounded-circle p-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="d-block text-light" href="#"
+                    ><i class="fa-brands fa-twitter fa-lg twitter rounded-circle p-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="d-block text-light" href="#"
+                    ><i class="fa-brands fa-linkedin fa-lg linkedin rounded-circle p-2"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="d-block text-light" href="#"
+                    ><i class="fa-brands fa-youtube fa-lg youtube rounded-circle p-2"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end horizonal scroll -->
+    <script src="js/horizonal.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+  </body>
+  </html>
