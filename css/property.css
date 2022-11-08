@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+:root {
+  --main-color1:#187875;
+  --dark-color: #163039;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: rgba(214, 204, 204, 0.13);
+
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(../Cairo/Cairo-VariableFont_wght.ttf);
+}
+
+ul {
+  list-style:none;
+}
+.section-padding{
+    padding:100px 0;
+  }
+i {
+  font-size: 1,6rem;
+  width:2rem;
+  height: 2rem;
+}
+body {
+    font-family: 'Cairo',myFirstFont;
+    line-height: 1.2;
+}
+
+      
+input,
+textarea {
+box-shadow: none !important;
+  }
+
+.main-btn {
+background-color: var(--red-color);
+color: var(--yellow-color);
+padding: 0.5rem 1rem;
+}
+.main-btn:hover {
+color: var(--yellow-color);
+}
+ /* Start Navbar */
+ .navbar {
+  background-color: white;
+}
+.navbar .navbar-brand {
+  color:var(--dark-color)
+}
+.navbar .navbar-nav .nav-link {
+  color:var(--dark-color)
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color);
+}
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+.navbar .search svg {
+  color: var(--green-color);
+}
+.navbar .navbar-toggler {
+  color: var(--dark-color);
+  font-size: 25px;
+  border-color: var(--dark-color);
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color);
+}
+
+.navbar .user {
+  background-color: var(--section-color);
+}
+
+@media (min-width:992px) {
+  .navbar .user {
+    display: none;
+  }
+}
+.navbar .user > * {
+  padding:10px;
+
+}
+
+
+/* End Navbar */
+
+.logo {
+width:80px;
+height: 70px;
+}
+
+.bell .container {
+  direction: rtl;
+  position: relative;
+  
+}
+
+
+.bell .container h2 {
+  word-spacing: -0.7px;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--dark-color);
+}
+
+
+
+.bell .container button {
+  background-color: #187875;
+  color: white;
+
+}
+
+
+.bell .container .notification {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  top: 54%;
+  position: absolute;
+  left: 10%;
+  background: radial-gradient(circle farthest-corner at top left, white, #187875); 
+}
+
+@media (max-width:767px) {
+  .bell .container .notification {
+    display: none;
+  }
+}
+
+
+  /* about property */
+  .about-property .card .img {
+  width: 100%;
+  height: 450px;
+  }
+
+  .about-property .card .img img {
+  width:100%;
+  height: 100%;
+  }
+  .about-property .map {
+  position:absolute;
+  top:85%;
+  width:fit-content;
+  background-color: rgba(0,0,0,0.6);
+  border-radius:20px;
+  padding:3px 10px;
+  cursor: pointer;
+  }
+
+  .about-property .map ,
+  .about-property .map  i {
+  color:white;
+  }
+.about-property .p-main-icons button {
+  border:0;
+background-color: #dddddd42;
+width:100px;
+margin-left: 10px;
+padding: 5px 25px;
+border-radius: 36px;
+cursor: pointer;
+}
+
+
+.about-property .p-main-icons .share  {
+  overflow-x:scroll;
+}
+.about-property .p-main-icons .share span i {
+color:#43ddd8 !important;
+}
+
+
+  /* about property */
+  @media (max-width:767px) {
+  .about-property .card .img {
+    max-height: 40vh;
+  
+    }
+  }
+
+
+.about-property .features .feature span {
+  font-size: 0.6rem;
+}
+
+.about-property .card  .descripiton p {
+  font-size: 0.7rem;
+}
+.about-property .user-icon {
+  border: 0;
+  width:50px;
+  height: 50px;
+  background-color:var(--dark-color);
+  border-radius: 50%;
+  ;
+}
+
+@media (max-width:767px) {
+.about-property .user-icon {
+  display: none;
+}
+.about-property .logo{
+  margin:auto
+}
+}

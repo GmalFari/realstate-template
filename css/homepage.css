@@ -16,7 +16,69 @@ ul {
 .section-padding{
     padding:100px 0;
   }
+
   
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background:#f1fbff;
+}
+  
+  
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+.main-btn:hover {
+    color: var(--yellow-color);
+}
+.main-title::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* Start Navbar */
+  .navbar {
+    background-color: var(--dark-color);
+  }
+  .navbar .navbar-brand {
+    color:var(--section-color)
+  }
+  .navbar .navbar-nav .nav-link {
+    color: white;
+  }
+  .navbar .navbar-nav .nav-link.active,
+  .navbar .navbar-nav .nav-link:focus,
+  .navbar .navbar-nav .nav-link:hover {
+    color: var(--green-color);
+  }
+  .navbar .search {
+    border-left: 1px solid var(--green-color);
+  }
+  .navbar .search svg {
+    color: var(--green-color);
+  }
+  .navbar .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+  }
+  .navbar .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green-color);
+  }
+  /* End Navbar */
+  
+/* start carousel */
   .carousel-item {
     height: 70vh;
     min-height: 300px;
@@ -236,6 +298,14 @@ ul {
   }
   
 }
+/* end carousel */
+
+/* start question */
+.question {
+  direction: rtl;
+  
+}
+/* end question */
 
 /* horizonal scroll */
 
@@ -480,6 +550,7 @@ ul {
 .footer {
   background-color: var(--dark-color);
 }
+
 .footer .copyright > span {
   color: var(--green-color);
 }
