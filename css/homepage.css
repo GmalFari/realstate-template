@@ -359,9 +359,7 @@ body {
 
  
   
-  
-  
-  .gallery-row.small img{
+.gallery-row.small img{
     height:150px;
     width:auto;
   }
@@ -545,6 +543,7 @@ body {
   background-color: transparent;
 
 }
+
 
 /* Start Footer */
 .footer {

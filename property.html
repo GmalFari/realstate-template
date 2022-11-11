@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet" />
-    
+    <script src="js/jquery-3.6.1.min.js"></script>
   </head>
   <body class="bg-body" style="height: 4000px">
     <nav class="navbar navbar-expand-lg ">
@@ -39,10 +39,10 @@
         <div class="collapse navbar-collapse" id="main">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="{% url 'realstate:homepage' %}">الرئيسية</a>
+                <a class="nav-link p-2 p-lg-3 active" aria-current="page" href="#">الرئيسية</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link p-2 p-lg-3" href="{% url 'realstate:rs-create' %}">إضافة عقار</a>
+                <a class="nav-link p-2 p-lg-3" href="#">إضافة عقار</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link p-2 p-lg-3" href="#">Portfolio</a>
@@ -68,7 +68,7 @@
         </div>
     </nav>
     <main>
-        <div class="bell mt-5">
+        <div class="bell container mt-5">
            <div class="container ">
             <div class="bell-text">
                 <h2>هل ترغب بتلقي إشعارات من هذا الإعلان</h2>
@@ -82,25 +82,82 @@
               </div>
            </div>
         </div>
-        <section class="about-property py-3">
+        <section class="about-property container py-3">
             <div class="container  py-5">
               <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-12 mb-5 card-container">
-                  <div class="card">
-                    <div class="img position-relative">
-                      <img src="imgs/pro18.jpg" alt="" class=" main-img-property img-fluid ">
-                      <div class="map position-absolute">
-                        <i class="fa-solid fa-location-dot"></i>
-                         <small>الخريطة</small>
+                  <div class="">
+                    <div class="img">
+                      <ul class="btn-group media">
+                        <li class="nav-item me-2">
+                          <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                            <label class="btn btn-outline" for="btn-check-outlined">فيديو</label>
+                        </li>
+                        <li class="nav-item me-2">
+                          <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                            <label class="btn btn-outline" for="btn-check-outlined">صور</label>
+                        </li>
+                        <li class="nav-item me-2">
+                          <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                            <label class="btn btn-outline" for="btn-check-outlined">الخريطة</label>
+                        </li>
+                      </ul>
+                      <div class="img-property position-relative">
+                      <div class="truecheck position-absolute">
+                        <i class="fa-solid fa-check"></i>                         
+                        <small>TrueCheck</small>
+                      </div>
+                        <img id="main-img1"  src="imgs/pro18.jpg" alt="" class=" main-img-property img-fluid">
+                        <div class="map position-absolute">
+                          <i class="fa-solid fa-location-dot"></i>
+                           <small>الخريطة</small>
+                        </div>
+                      </div>
+                      <div class=" scroll-imgs">
+                        <div id="widthControlled" class="gallery-row small ">
+                          <?xml version="1.0" encoding="utf-8"?>
+                          <div class="map-img ">
+                            <img src="imgs/map-flat.jpg" alt="">
+                          </div>
+                        <div id="scrollerimgs" class="gallery-row-scroll mx-auto">
+                          <a href="#" class="btn  btn-labeled">
+                            <img  class="img-fluid" src="imgs/img1.jpg" alt="" >
+                          </a>
+                    
+                          <a href="#" class="btn  btn-labeled">
+                            <img src="imgs/imag7.jpg" alt="" >
+                          </a>
+                          <a href="#" class="btn  btn-labeled">
+                            <img src="imgs/image2.webp" alt="" >
+                          </a>
+                          <a href="#" class="btn  btn-labeled">
+                            <img src="imgs/img6.jpg" alt="" >
+                          </a>
+                          <a href="#" class="btn  btn-labeled">
+                            <img src="imgs/img5.jpg" alt="" >
+                            <a href="#" class="btn  btn-labeled">
+                              <img src="imgs/img4.jpg" alt="" >
+                            </a>
+                            <a href="#" class="btn btn-labeled">
+                              <img src="imgs/img1.webp" alt="" >
+                            </a>
+                            <a href="#" class="btn  btn-labeled">
+                              <img src="imgs/shibam.jpg" alt="" >
+                            
+                            </a>
+                            <a href="#" class="btn  btn-labeled">
+                              <img src="imgs/main1.jpg" alt="" >
+                            </a>
+                          </div>
+                      </div>
                       </div>
                     </div>
-                    <div class="img-content px-3 py-2">
+                    <div class="img-content container px-3 py-2">
                       <div class="p-main-icons d-flex justify-content-between flex-nowrap">
-                        <h2 class="mt-3 mx-3">$3500+</h2>
+                        <h2 class="mt-3 ">$3500+</h2>
                         <div class="share mt-3 d-flex justify-content-between flex-nowrap">
                             <button class="">
                               <i style="color:#187875" class="fa-solid fa-share"></i>
-                              
                             </button>
                             <button>
                               <i style="color:#187875" class="fa-regular fa-heart"></i>
@@ -134,48 +191,174 @@
                         </div>
                     </div>
                   </div>
-                </div>
-                <div class="contact col-lg-4  mb-5 card-container">
-                    <div class="agent w-100 d-flex flex-wrap">
-                        <div class="user w-100  mb-5">
-                          <div class="user-img d-flex justify-content-between">
-                            <button class='user-icon btn'>
-                              <i class="fa-regular fa-user"></i>
-                            </button>
-                          <div class="logo w-100">
-                            <img class="mb-3 rounded-circle" style="width:50px;height:50px" src="imgs/logo.png" alt="">
-                            <p class="text-black-50 fs-6">وكيل العقار: aldar property pjsc</p>
-                            <hr>
-                            <a href="#"> عرض جميع العقارات</a>
-                          </div>
-                        </div>
-                          <form class="my-5">
-                            <div class="form-floating  mb-3 p ">
-                            <input type="text" class="form-control fs-6 fw-light " id="floatingInput" placeholder="name@example.com">
-                            <label style="left:80% !important;font-size:10px !important;" class="fs-6 " for="floatingInput">رقم التلفون</label>
-                          </div>
-                          <div class="form-floating">
-                            <textarea class="form-control fs-6 fw-light" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 70px"></textarea>
-                            <label style="left:80% !important;font-size:10px !important;" class="fs-6 text-black-50 " for="floatingTextarea2">محتوى الرسالة</label>
-                          </div>
-                          </form>
-                          <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">
-                              <i class="fa-brands fa-whatsapp"></i>
-                            </button>
-                            <button type="button" class="btn btn-primary">
-                              <i class="fa-solid fa-phone"></i>
-                            </button>
-                            <button type="button" class="btn btn-primary">
-                              <i class="fa-regular fa-envelope"></i>
-                            </button>
-                          </div>
+                  <div class="property-info mt-4 mb-4 container ">
+                    <h3>معلومات عن العقار</h3>
+                    <ul class=" ">
+                      <li>
+                        <span>نوع العقار</span>
+                        <span>شقة</span>
+                      </li>
+                      <li>
+                        <span>نوع العرض</span>
+                        <span>للبيع</span>
+                      </li>
+                      <li>
+                        <span>الرقم المرجعي</span>
+                        <span>الدليل العقاري 102</span>
+                      </li>
+                      <li>
+                        <span>حالة البناء</span>
+                        <span>جاهز</span>
+                      </li>
+                      <li>
+                        <span>التأثيث</span>
+                        <span>غير المفروشة</span>
+                      </li>
+                      <li>
+                        <span>تاريخTruecheck</span>
+                        <span>2/12/2022</span>
+                      </li>
+                      <li>
+                        <span>تاريخTruecheck</span>
+                        <span>2/12/2022</span>
+                      </li>
+                      <li>
+                        <span>تاريخ الإضافة</span>
+                        <span>12 سبتمبر 2022</span>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  <div class="checked-property-info property-info container  mt-4 mb-4 ">
+                    <h3>بيانات موثقة عن العقار 
+                        <img src="imgs/success-green-check-mark-icon.svg" alt="">
+                    </h3>
+                    <ul class=" ">
+                      <li>
+                        <span>الملكية </span>
+                        <span>حر</span>
+                      </li>
+                      <li>
+                        <span>المساحة المبنية</span>
+                        <span> 3,765 قدم مربع </span>
+                      </li>
+                      <li>
+                        <span>مساحة الأرض</span>
+                        <span> 8,880 قدم مربع </span>
+                      </li>
+                      <li>
+                    </ul>
+                  </div>
+                    <div class="features container mt-4 mb-4">
+                    <h3>المزايا والخدمات</h3>
+                      <div class="boxes">
+                            <div class="box">
+                              <i style="color:#187875" class="fa-solid fa-bed"></i>
+                                <span>موقف سيارات </span>
+                            </div>
+                            <div class="box">
+                              <i style="color:#187875" class="fa-solid fa-bath"></i>
+                                <span>موقف سيارات </span>
+                            </div>
+                            <div class="box">
+                              <i style="color:#187875" class="fa-solid fa-house"></i>
+                                <span>موقف سيارات </span>
+                            </div>
+                            <div class="box">
+                              <i style="color:#187875" class="fa-solid fa-car"></i>
+                                <span>موقف سيارات </span>
+                            </div>
+                            <div class="box">
+                              <i style="color:#187875" class="fa-solid fa-heart"></i>
+                                <span>موقف سيارات </span>
+                            </div>
+                            <div class="box">
+                              <i style="color:#187875" class="fa-solid fa-car"></i>
+                                <span>موقف سيارات </span>
+                            </div>
+                            <div class="box">
+                              <i style="color:#187875" class="fa-solid fa-user"></i>
+                                <span>موقف سيارات </span>
+                            </div>   
+                      </div>
+                  </div>
+                  <div class="near-places mt-5 mb-5">
+                    <div class="near-title d-flex justify-content-between">
+                      <h3>المواقع والأماكن القريبة</h3>
+                      <button class="btn">
+                        عرض على الخريطة
+                      </button>
                     </div>
+                      <div class="boxes mt-3">
+                        <div class="box-places">
+
+                        </div>
+                      </div>
+                  </div>
                 </div>
-              </div>
+              <div class="contact col-lg-4  mb-5 card-container">
+                  <div class=" p-3 agent ">
+                      <div class="card agent-info p-4">
+                        <div class="user  mb-5">
+                          <div class="user-img  d-flex justify-content-between">
+                            <a href="#">
+                              <img class="mb-3  rounded-circle" src="imgs/logo.png" alt="">
+                            </a>
+                            <div class="logo flex-grow-1 ">
+                                <p class=" text-black-50">تمت أضافتة بواسطة<p>
+                                <p class="text-black ">وكيل العقار: aldar property pjsc</p>
+                                <div class="stars w-100 text-black-50">
+                                    <span>
+                                    <i style="color:#187875" class="fa-solid fa-star text-black-50"></i>
+                                      2 تقييمات                                    </span>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="star nav-item me-2 mt-4 text-center">
+                            <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                              <label class="btn btn-outline" for="btn-check-outlined">
+                                  <i style="color:#187875" class="fa-solid fa-pen text-black-50"></i>
+                                  أكتب تقييم
+                              </label>
+                          </div>
+                          <div class="show text-center  mt-5 mb-5">
+                              <a  href="#"> عرض جميع العقارات</a>
+                        </div>
+                      </div>
+                        <div class="input-contact">
+                          <form class="my-5 ">
+                              <div class="form-floating  mb-3 p ">
+                              <input type="text" class="form-control fs-6 fw-light " id="floatingInput" placeholder="name@example.com">
+                              <label style="left:80% !important;font-size:10px !important;" class="fs-6 " for="floatingInput">رقم التلفون</label>
+                            </div>
+                            <div class="form-floating">
+                              <textarea class="form-control fs-6 fw-light" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 70px"></textarea>
+                              <label style="left:80% !important;font-size:10px !important;" class="fs-6 text-black-50 " for="floatingTextarea2">محتوى الرسالة</label>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="btn-group contact-icons">
+                          <button type="button" class="btn">
+                            واتساب
+                            <i class="fa-brands fa-whatsapp"></i>
+                          </button>
+                          <button type="button" class="btn ">
+                            أتصل
+                            <i class="fa-solid fa-phone"></i>
+                          </button>
+                          <button type="button" class="btn ">
+                              بريد الكتروني
+                            <i class="fa-regular fa-envelope"></i>
+                          </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="same-property">
+                    <h3> عقارات مشابهه</h3>
+                  </div>
+                </div>
               </div>
             </div>
-            
             <i class="fas fa-angle-left change-background fa-2x"></i>
             <i class="fas fa-angle-right change-background fa-2x"></i>
             <div class="bullets-btn">
@@ -187,20 +370,32 @@
             </div>
           </section>
     </main>
-    <button type="button" class="btn btn-primary position-relative">
-      Mails <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span class="visually-hidden">unread messages</span></span>
-    </button>
-    
-    <button type="button" class="btn btn-dark position-relative">
-      Marker <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#212529" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
-    </button>
-    
-    <button type="button" class="btn btn-primary position-relative">
-      Alerts <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">unread messages</span></span>
-    </button>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeIn" style="max-width:500px">
+          <div class="mb-3">
+            <h1 class="mb-3">Property types</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates tempore corrupti placeat rem consequuntur aliquid?
+
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+ <!-- horizonal scroll -->
+
+
+<!-- <ul id="thumb_img">
+  <li><button data-src='imgs/imag7.jpg'><img src='imgs/imag7.jpg' /></button></li>
+  <li><button data-src='imgs/image2.webp'><img src='imgs/image2.webp' /></button></li>
+  <li><button data-src='imgs/img3.jpg'><img src='imgs/img3.jpg' /></button></li> -->
+<!-- </ul> -->
+<script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
-    <script src="js/property.js"></script>
+    <script src="js/property.js">
+    </script>
 
 </body>
 </html>
